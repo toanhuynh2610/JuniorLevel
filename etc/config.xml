@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <clock_config>
+            <general>
+                <title_clock>Time</title_clock>
+                <size_clock>1</size_clock>
+                <color_clock>eb5202</color_clock>
+                <text_clock>eb5202</text_clock>
+            </general>
+        </clock_config>
+    </default>
+</config>

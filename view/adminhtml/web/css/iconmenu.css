@@ -1,0 +1,12 @@
+@font-face {
+    font-family:'Icomoon';
+    src:url('../fonts/icomoon.eot');
+    src:url('../fonts/icomoon.eot?#iefix') format('embedded-opentype'),url('../fonts/icomoon.woff') format('woff'),url('../fonts/icomoon.ttf') format('truetype'),url('../fonts/icomoon.svg') format('svg');font-weight:normal;font-style:normal
+}
+
+.admin__menu .level-0.item-clock-index > a::before {
+    content: '\e950';
+    font-size: 3.0rem;
+    padding-top: 0.1rem;
+    font-family:'Icomoon';
+}

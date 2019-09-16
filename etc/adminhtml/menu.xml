@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add
+                id="Magenest_Rule::clock_index"
+                title="Countdown"
+                module="Magenest_Rule"
+                sortOrder="33"
+                resource="Magenest_Rule::clock_menu"
+        />
+        <add
+                id="Magenest_Rule::countdown"
+                title="Countdown"
+                module="Magenest_Rule"
+                sortOrder="0"
+                resource="Magenest_Rule::countdown"
+                parent="Magenest_Rule::clock_index"
+        />
+        <add
+                id="Magenest_Rule::clock"
+                title="Clock"
+                module="Magenest_Rule"
+                sortOrder="10"
+                parent="Magenest_Rule::countdown"
+                resource="Magenest_Rule::clock"
+        />
+        <add
+                id="Magenest_Rule::configuration"
+                title="Configuration"
+                module="Magenest_Rule"
+                sortOrder="20"
+                parent="Magenest_Rule::countdown"
+                resource="Magenest_Rule::configuration"
+                action="adminhtml/system_config/edit/section/clock_config/"
+        />
+    </menu>
+</config>

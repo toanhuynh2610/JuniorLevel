@@ -1,0 +1,18 @@
+<div style="padding-left:500px" class='time-frame'>
+    <p style="color:#<?= $block->getTitleColor();  ?>"><?= $block->getTitle();?></p>
+    <div style="color:#<?= $block->getClockColor(); ?>"id='time-part'></div>
+</div>
+<script>
+    require(["jquery"
+    ], function($){
+        'use strict';
+        $(document).ready(function() {
+            setInterval(function() {
+                var date = new Date();
+                $('#time-part').html(
+                    date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds()
+                );
+            }, 500);
+        });
+    })
+</script>
