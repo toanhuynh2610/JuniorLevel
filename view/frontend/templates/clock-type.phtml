@@ -1,6 +1,7 @@
+<?php /* @var Magenest\Rule\Block\ShowClock $block*/?>
 <div style="padding-left:500px" class='time-frame'>
     <p style="color:#<?= $block->getTitleColor();  ?>"><?= $block->getTitle();?></p>
-    <div style="color:#<?= $block->getClockColor(); ?>"id='time-part'></div>
+    <div style="color:#<?= $block->getClockColor(); ?>; font-size: <?= $block->getClockSize() ?>"id='time-part'></div>
 </div>
 <script>
     require(["jquery"

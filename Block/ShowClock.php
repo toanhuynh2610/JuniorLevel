@@ -57,7 +57,7 @@ class ShowClock extends Template
         return $this->scopeConfig->getValue('clock_config/general/color_clock');
     }
 
-    public function clearCache(){
-        $this->cacheTypeList->cleanType(\Magento\Framework\App\Cache\Type\Block::TYPE_IDENTIFIER);
+    public function getClockSize(){
+        return $this->scopeConfig->getValue('clock_config/general/size_block') === 2 ? '180%' : '50%';
     }
 }
