@@ -3,6 +3,7 @@
     <default>
         <clock_config>
             <general>
+                <clock_type>{"32000":"1","1":"1","2":"1","3":"1","0":"1"}</clock_type>
                 <title_clock>Time</title_clock>
                 <size_clock>1</size_clock>
                 <color_clock>eb5202</color_clock>
@@ -10,4 +11,17 @@
             </general>
         </clock_config>
     </default>
+    <stores>
+        <vn>
+            <clock_config>
+                <general>
+                    <clock_type>{"32000":"1","1":"1","2":"1","3":"1","0":"1"}</clock_type>
+                    <title_clock>Dong Ho</title_clock>
+                    <size_clock>1</size_clock>
+                    <color_clock>34abeb</color_clock>
+                    <text_clock>34abeb</text_clock>
+                </general>
+            </clock_config>
+        </vn>
+    </stores>
 </config>

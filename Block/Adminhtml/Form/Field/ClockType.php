@@ -3,6 +3,7 @@
 namespace Magenest\Rule\Block\Adminhtml\Form\Field;
 
 use Magento\Config\Block\System\Config\Form\Field\FieldArray\AbstractFieldArray;
+use Magento\Framework\Data\Form\Element\AbstractElement;
 use Magento\Framework\DataObject;
 
 /**
@@ -83,7 +84,7 @@ class ClockType extends AbstractFieldArray
     {
         $customerGroup = $row->getCustomerGroup();
         $options = [];
-        if ($customerGroup) {
+        if (isset($customerGroup)) {
             $options['option_' . $this->getCustomerGroup()->calcOptionHash($customerGroup)]
                 = 'selected="selected"';
 
@@ -92,5 +93,28 @@ class ClockType extends AbstractFieldArray
                 = 'selected="selected"';
         }
         $row->setData('option_extra_attrs', $options);
+    }
+    public function renderCellTemplate($columnName)
+    {
+        if (empty($this->_columns[$columnName])) {
+            throw new \Exception('Wrong column name specified.');
+        }
+        $column = $this->_columns[$columnName];
+        $inputName = $this->_getCellInputElementName($columnName);
+
+        if ($column['renderer']) {
+            if($columnName == "customer_group"){
+                $column['renderer']->setExtraParams('readonly="readyonly" style="pointer-events: none;"');
+            }
+            return $column['renderer']->setInputName(
+                $inputName
+            )->setInputId(
+                $this->_getCellInputElementId('<%- _id %>', $columnName)
+            )->setColumnName(
+                $columnName
+            )->setColumn(
+                $column
+            )->toHtml();
+        }
     }
 }

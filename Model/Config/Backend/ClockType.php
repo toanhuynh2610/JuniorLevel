@@ -74,7 +74,7 @@ class ClockType extends Value
         }
         $result = [];
         foreach ($value as $data) {
-            if (empty($data['customer_group']) || empty($data['clock_type'])) {
+            if (!isset($data['customer_group']) || !isset($data['clock_type'])) {
                 continue;
             }
             $result[$data['customer_group']] = $data['clock_type'];

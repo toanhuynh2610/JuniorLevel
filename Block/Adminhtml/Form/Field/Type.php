@@ -2,7 +2,7 @@
 
 namespace Magenest\Rule\Block\Adminhtml\Form\Field;
 
-use Magenest\Movie\Model\Config\Source\ClockType;
+use Magenest\Rule\Model\Config\Source\ClockType;
 use Magento\Framework\View\Element\Context;
 use Magento\Framework\View\Element\Html\Select;
 
