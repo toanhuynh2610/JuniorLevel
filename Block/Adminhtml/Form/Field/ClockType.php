@@ -22,6 +22,12 @@ class ClockType extends AbstractFieldArray
     protected $clockType = null;
 
     /**
+     * @var string
+     */
+    protected $_template = 'Magenest_Rule::system/config/form/field/array.phtml';
+
+
+    /**
      * @return \Magento\Framework\View\Element\BlockInterface|null
      * @throws \Magento\Framework\Exception\LocalizedException
      */
@@ -94,6 +100,12 @@ class ClockType extends AbstractFieldArray
         }
         $row->setData('option_extra_attrs', $options);
     }
+
+    /**
+     * @param string $columnName
+     * @return string
+     * @throws \Exception
+     */
     public function renderCellTemplate($columnName)
     {
         if (empty($this->_columns[$columnName])) {

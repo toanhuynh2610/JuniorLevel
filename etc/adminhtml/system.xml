@@ -13,7 +13,7 @@
                    sortOrder="1" showInDefault="1" showInWebsite="1"
                    showInStore="1" >
                 <label>Clock settings</label>
-                <attribute type="expanded">0</attribute>
+                <frontend_model>Magenest\Rule\Block\Adminhtml\CollapseGroup</frontend_model>
                 <field id="title_clock" translate="label"
                        type="text" sortOrder="10" showInDefault="1"
                        showInWebsite="1" showInStore="1" >
