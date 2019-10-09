@@ -21,18 +21,9 @@ $_colspan = $block->isAddAfter() ? 2 : 1;
                 <?php foreach ($block->getColumns() as $columnName => $column): ?>
                     <th><?= /* @escapeNotVerified */ $column['label'] ?></th>
                 <?php endforeach;?>
-                <th class="col-actions" colspan="<?= /* @escapeNotVerified */ $_colspan ?>"><?= /* @escapeNotVerified */ __('Action') ?></th>
             </tr>
             </thead>
             <tfoot>
-            <tr>
-                <td colspan="<?= count($block->getColumns())+$_colspan ?>" class="col-actions-add">
-                    <button  disabled="disabled" id="addToEndBtn<?= /* @escapeNotVerified */ $_htmlId ?>" class="action-add" title="<?= /* @escapeNotVerified */ __('Add') ?>" type="button">
-                        <span><?= /* @escapeNotVerified */ $block->getAddButtonLabel() ?></span>
-                    </button>
-                </td>
-            </tr>
-            </tfoot>
             <tbody id="addRow<?= /* @escapeNotVerified */ $_htmlId ?>"></tbody>
         </table>
     </div>
@@ -59,7 +50,6 @@ $_colspan = $block->isAddAfter() ? 2 : 1;
                     + '<td><button class="action-add" type="button" id="addAfterBtn<%- _id %>"><span><?= /* @escapeNotVerified */ __('Add after') ?><\/span><\/button><\/td>'
                     <?php endif; ?>
 
-                    + '<td class="col-actions"><button onclick="arrayRow<?= /* @escapeNotVerified */ $_htmlId ?>.del(\'<%- _id %>\')" class="action-delete" disabled="disabled" type="button"><span><?= /* @escapeNotVerified */ __('Delete') ?><\/span><\/button><\/td>'
                     +'<\/tr>'
                 ),
 
@@ -109,8 +99,6 @@ $_colspan = $block->isAddAfter() ? 2 : 1;
                 }
             }
 
-            // bind add action to "Add" button in last row
-            Event.observe('addToEndBtn<?= /* @escapeNotVerified */ $_htmlId ?>', 'click', arrayRow<?= /* @escapeNotVerified */ $_htmlId ?>.add.bind(arrayRow<?= /* @escapeNotVerified */ $_htmlId ?>, false, false));
 
             // add existing rows
             <?php
