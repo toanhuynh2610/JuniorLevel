@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+    <fieldset name="magenest">
+        <argument name="data" xsi:type="array">
+            <item name="config" xsi:type="array">
+                <item name="label" xsi:type="string">Magenest Rule</item>
+                <item name="collapsible" xsi:type="boolean">true</item>
+                <item name="dataScope" xsi:type="string">data.product</item>
+                <item name="dataSource" xsi:type="string">data.product</item>
+                <item name="sortOrder" xsi:type="number">10</item>
+            </item>
+        </argument>
+        <field name="start_date">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="dataType" xsi:type="string">string</item>
+                    <item name="label" xsi:type="string" translate="true">Date</item>
+                    <item name="formElement" xsi:type="string">date</item>
+                    <item name="dataScope" xsi:type="string">data.product</item>
+                    <item name="dataSource" xsi:type="string">data.product</item>
+                    <item name="component" xsi:type="string">Magenest_Rule/js/form/element/time</item>
+                </item>
+            </argument>
+        </field>
+    </fieldset>
+<!--    <fieldset name="product-details">-->
+<!--        <argument name="data" xsi:type="array">-->
+<!--            <item name="config" xsi:type="array">-->
+<!--                <item name="label" xsi:type="string">Magenest Rule</item>-->
+<!--                <item name="collapsible" xsi:type="boolean">false</item>-->
+<!--                <item name="sortOrder" xsi:type="number">33</item>-->
+<!--            </item>-->
+<!--        </argument>-->
+<!--    </fieldset>-->
+</form>
